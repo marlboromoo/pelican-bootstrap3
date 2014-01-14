@@ -5,6 +5,11 @@
 <aside>
     <section>
         <ul class="list-group list-group-flush">
+            {% for title, icon, block in BLOCKS %}
+            <li class="list-group-item"><h4><i class="fa {{ icon }} fa-lg"></i> {{ title }} </h4></li>
+                {{ block }}
+            {% endfor %}
+
             {% if SOCIAL %}
                 <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
                   <ul class="list-group" id="social">
