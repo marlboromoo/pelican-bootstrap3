@@ -113,8 +113,8 @@
                                         <li><a href="{{ SITEURL  }}/{{ p_.url  }}">{{ p_.title }}</a></li>
                                         {% endif %}
                                     {% endfor %}
-                                    {% for title, link in DROPDOWN_MENUITEMS[p.title] %}
-                                        <li><a href="{{ link }}" target="_blank">{{ title }}</a></li>
+                                    {% for title, link, target in DROPDOWN_MENUITEMS[p.title] %}
+                                        <li><a href="{{ link }}" target="{{ target }}">{{ title }}</a></li>
                                     {% endfor %}
                                       </ul>
                                     </li>
